@@ -1,0 +1,37 @@
+extends(src='layout.sgr')
+  block(name='title')
+    title What a fantastic page!
+
+  block(name='stylesheet-page')
+    link(rel='stylesheet' href='css/fantastic.css')
+
+  block(name='header')
+    img.logo(src='img/Opensource.svg.png')
+    nav
+      a(href='#') Home
+      a(href='#') About
+      a(href='#') Solutions
+      a(href='#') Prices
+      a(href='#') More
+
+  block(name='content')
+    ul
+      li Point 1
+      li Point 2
+      li
+        | And what is this?
+      li(mdi) *Title??* Now?
+      li(md).
+        ### Hello
+
+        and **Howdy**!
+
+        jooooho
+      each(loop='post of contentful.posts')
+        li {{ post.fields.heroImage.fields.file.fileName }}
+        img(src='https:{{ post.fields.heroImage.fields.file.url }}?w=400&h=400&fit=fill&fm=webp&r=360')
+
+    each(loop='person of contentful.persons')
+      p {{ person.fields.name }}
+      p {{ person.fields.email }}
+      p {{ person.fields.github }}

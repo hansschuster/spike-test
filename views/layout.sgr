@@ -1,0 +1,23 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='description' content='Hello!')
+    meta(name='author' content='hansschuster')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+
+    block(name='title')
+      title What a Site!
+
+    link(rel='stylesheet' href='css/index.css')
+    block(name='stylesheet-page')
+
+  body
+    header#header
+      block(name='header')
+
+    main(role='main' id='{{ pageId }}')
+      block(name='content')
+
+    block(name='javascript')
+      script(src='js/main.js' defer)
