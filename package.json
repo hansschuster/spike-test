@@ -9,7 +9,7 @@
   "bugs": "https://github.com/hansschuster/test-project-2/issues",
   "dependencies": {
     "reshape-standard": "^3.0.0",
-    "spike": "^2.0.0",
+    "spike": "^2.2.0",
     "spike-contentful": "^2.0.0",
     "spike-css-standards": "^3.0.0",
     "spike-js-standards": "^2.0.2",
